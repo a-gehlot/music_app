@@ -1,0 +1,16 @@
+<h2> Albums </h2>
+
+<ul>
+    <% @bands.each do |band| %>
+    <li>
+        <%= band.name %>
+        <ul>
+            <% band.albums.each do |album| %>
+            <li>
+                <%= album.title %> <br>
+                <% end %>
+            </li>
+        </ul>
+    </li>
+    <% end %>
+</ul>

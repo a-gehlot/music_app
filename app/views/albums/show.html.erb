@@ -1,0 +1,15 @@
+<h1>
+    Album name: <%= @album.title %>
+</h1>
+
+<h2>
+    Recording style: <%= @album.live? ? "Live" : "Studio" %>
+    <br>
+    Band: <%= link_to "#{@album.band.name}", band_path(@album.band_id) %>
+    <br>
+    Year: <%= @album.year %>
+</h2>
+
+<%= link_to "Edit album", edit_album_path(@album) %>
+<br>
+<%= link_to "Delete album", album_path(@album), method: :delete, :data => {:confirm => 'Are you sure?'} %>
