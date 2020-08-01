@@ -12,14 +12,14 @@
 
     <nav class="nav-bar">
       <h1 class="header">Music App!</h1>
-    <ul class="nav-links"><% if current_user %>
-      <h2>Welcome, <%= current_user.email %></h2>
-      <li class="nav-item"><%= link_to "Logout", session_url, method: :delete %></li>
-    <% else %>
-      <li class="nav-item"><%= link_to "Login", new_session_url, method: :get %></li>
-      <li class="nav-item"><%= link_to "Signup", new_user_url, method: :get %></li>
-    <% end %>
-    </ul>
+        <ul class="nav-links"><% if current_user %>
+          <h2>Welcome, <%= current_user.email %></h2>
+            <li class="nav-item"><%= link_to "Logout", session_url, method: :delete %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to "Login", new_session_url, method: :get %></li>
+          <li class="nav-item"><%= link_to "Signup", new_user_url, method: :get %></li>
+        <% end %>
+        </ul>
     </nav>
   </head>
 

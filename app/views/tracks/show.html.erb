@@ -1,0 +1,11 @@
+<h1>
+    <%= @track.title %> by <%= @track.band.name %>
+</h1>
+
+Lyrics: <%= @track.lyrics %>
+<br>
+
+<%= link_to "Edit track", edit_track_path(@track) %>
+<br>
+<%= link_to "Delete track", track_path(@track), method: :delete, :data => {:confirm => 'Are you sure?'} %>
+<br>

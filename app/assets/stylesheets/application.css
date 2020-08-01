@@ -21,16 +21,13 @@
     background-color: seagreen;
 }
 
-.header {
-    padding: 10px;
-}
 
 .nav-links {
     list-style: none;
+    padding: 10px;
 }
 
 .nav-item {
     display: inline-block;
     display: 10px 15px;
-    padding: 10px;
 }

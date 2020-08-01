@@ -13,3 +13,14 @@
 <%= link_to "Edit album", edit_album_path(@album) %>
 <br>
 <%= link_to "Delete album", album_path(@album), method: :delete, :data => {:confirm => 'Are you sure?'} %>
+<br>
+
+<h3>Tracks</h3>
+<ul>
+    <% @album.tracks.each do |track| %>
+        <li>
+            <%= link_to "#{track.title}", track_path(track.id) %>
+        </li>
+    <% end %>
+</ul>
+

@@ -1,5 +1,6 @@
-class Tracks < ApplicationRecord
-    validates :title, :ord, :bonus, :album_id, presence: true
+class Track < ApplicationRecord
+    validates :title, :album_id, :ord, presence: true
+    validates :bonus, inclusion: { in: [ true, false ] }
     belongs_to :album, dependent: :destroy
-    has_one :band, through: :albums
+    has_one :band, through: :album
 end
