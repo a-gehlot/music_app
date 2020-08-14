@@ -2,7 +2,16 @@
     <%= @track.title %> by <%= @track.band.name %>
 </h1>
 
-Lyrics: <%= @track.lyrics %>
+Lyrics: <%= ugly_lyrics(@track.lyrics) %>
+<br>
+
+<% @track.notes.each do |note| %>
+    <%= render "notes/note", note: note %>
+<% end %>
+<br>
+
+Add note:
+<%= render "notes/form", track: @track %>
 <br>
 
 <%= link_to "Edit track", edit_track_path(@track) %>

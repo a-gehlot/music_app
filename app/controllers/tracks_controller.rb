@@ -6,7 +6,7 @@ class TracksController < ApplicationController
 
     def create
         @track = Track.new(track_params)
-        if @track.save!
+        if @track.save
             redirect_to track_path(@track)
         else
             flash.now[:errors] = @track.errors.full_messages

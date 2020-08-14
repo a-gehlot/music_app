@@ -6,8 +6,8 @@
         <%= band.name %>
         <ul>
             <% band.albums.each do |album| %>
-            <li>
-                <%= album.title %> <br>
+            <li> 
+                <%= link_to "#{album.title}", album_path(album.id) %>
                 <% end %>
             </li>
         </ul>

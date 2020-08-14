@@ -3,6 +3,7 @@ class User < ApplicationRecord
     validates :password, allow_nil: true, length: { minimum: 6 }
     validates :email, presence: true, uniqueness: true
     validates :password_digest, presence: true
+    has_many :notes, dependent: :destroy
 
     attr_reader :password
 
